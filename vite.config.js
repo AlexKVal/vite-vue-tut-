@@ -1,7 +1,7 @@
 import path from 'path'
 import { defineConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue'
-// import Pages from 'vite-plugin-pages'
+import Pages from 'vite-plugin-pages'
 import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Unocss from 'unocss/vite'
@@ -10,6 +10,20 @@ export default defineConfig({
   resolve: {
     alias: {
       '~/': `${path.resolve(__dirname, 'src')}/`,
+    },
+  },
+  build: {
+    outDir: 'docs',
+  },
+  base: '/ttracker/',
+  server: {
+    proxy: {
+      '/api': {
+        target: 'http://localhost:5000',
+        changeOrigin: true,
+        secure: false,
+        rewrite: (path) => path.replace(/^\/api/, '')
+       }
     },
   },
   plugins: [
@@ -44,7 +58,7 @@ export default defineConfig({
 
     // https://github.com/antfu/unocss
     // see unocss.config.js for config
-    Unocss(),
+    // Unocss(),
   ],
 
   // https://github.com/vitest-dev/vitest

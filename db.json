@@ -1,0 +1,16 @@
+{
+  "tasks": [
+    {
+      "text": "Task #1",
+      "day": "22 Jan 2022",
+      "reminder": true,
+      "id": 2
+    },
+    {
+      "text": "Watch returning of the Halley's Comet",
+      "day": "Mid-2061",
+      "reminder": true,
+      "id": 3
+    }
+  ]
+}
