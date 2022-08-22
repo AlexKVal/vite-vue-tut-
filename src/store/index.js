@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia'
 import { useRoute } from 'vue-router'
 
-const apiUrl = 'http://localhost:5000/tasks'
+const apiUrl = '/api/tasks'
 
 export const useStore = defineStore('tasks', {
   store: () => ({

@@ -12,6 +12,20 @@ export default defineConfig({
       '~/': `${path.resolve(__dirname, 'src')}/`,
     },
   },
+  build: {
+    outDir: 'docs',
+  },
+  base: '/ttracker/',
+  server: {
+    proxy: {
+      '/api': {
+        target: 'http://localhost:5000',
+        changeOrigin: true,
+        secure: false,
+        rewrite: (path) => path.replace(/^\/api/, '')
+       }
+    },
+  },
   plugins: [
     Vue({
       // https://github.com/vuejs/core/tree/main/packages/reactivity-transform
