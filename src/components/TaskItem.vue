@@ -10,7 +10,7 @@ const store = useStore()
   <div class="task prevent-select" :class="{ reminder: task.reminder }" @dblclick="store.toggleReminder(task)">
     <h3>
       {{ task.text }}
-      <i class="fas fa-times" @click="store.deleteTask(task.id)" />
+      <i-mdi-close-circle class="fas" @click="store.deleteTask(task.id)" />
     </h3>
     <p>{{ task.day }}</p>
   </div>
@@ -18,7 +18,12 @@ const store = useStore()
 
 <style scoped>
 .fas {
+  --icon-size: 20px;
   color: red;
+  min-width: var(--icon-size);
+  min-height: var(--icon-size);
+  max-width: var(--icon-size);
+  max-height: var(--icon-size);
 }
 
 .task {
