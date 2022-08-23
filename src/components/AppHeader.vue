@@ -1,5 +1,5 @@
 <script setup>
-const props = defineProps({
+defineProps({
   title: {
     type: String,
     default: 'Hello World',
@@ -16,7 +16,7 @@ const buttonColor = computed(() => store.showTaskForm ? 'red' : 'green')
 
 <template>
   <header>
-    <h1>{{ props.title }}</h1>
+    <h1>{{ title }}</h1>
     <ToggleButton v-show="homePage" :text="buttonText" :color="buttonColor" @click="store.toggleAddTask" />
   </header>
 </template>

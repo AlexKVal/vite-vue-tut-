@@ -1,5 +1,5 @@
 <script setup>
-const props = defineProps({
+defineProps({
   task: Object
 })
 
@@ -7,12 +7,12 @@ const store = useStore()
 </script>
 
 <template>
-  <div class="task prevent-select" :class="{ reminder: props.task.reminder }" @dblclick="store.toggleReminder(props.task)">
+  <div class="task prevent-select" :class="{ reminder: task.reminder }" @dblclick="store.toggleReminder(task)">
     <h3>
-      {{ props.task.text }}
-      <i class="fas fa-times" @click="store.deleteTask(props.task.id)" />
+      {{ task.text }}
+      <i class="fas fa-times" @click="store.deleteTask(task.id)" />
     </h3>
-    <p>{{ props.task.day }}</p>
+    <p>{{ task.day }}</p>
   </div>
 </template>
 
