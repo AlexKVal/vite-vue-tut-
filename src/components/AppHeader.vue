@@ -17,7 +17,7 @@ const buttonColor = computed(() => store.showTaskForm ? 'red' : 'green')
 <template>
   <header>
     <h1>{{ title }}</h1>
-    <ColorButton v-show="homePage" :text="buttonText" :color="buttonColor" @click="store.toggleAddTask" />
+    <ToggleButton v-show="homePage" :text="buttonText" :color="buttonColor" @click="store.toggleAddTask" />
   </header>
 </template>
 
