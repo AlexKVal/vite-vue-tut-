@@ -4,6 +4,8 @@ import Vue from '@vitejs/plugin-vue'
 import Pages from 'vite-plugin-pages'
 import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
+import Icons from 'unplugin-icons/vite'
+import IconsResolver from 'unplugin-icons/resolver'
 import Unocss from 'unocss/vite'
 
 export default defineConfig({
@@ -54,7 +56,11 @@ export default defineConfig({
     // https://github.com/antfu/vite-plugin-components
     Components({
       dts: false,
+      resolvers: [
+        IconsResolver(),
+      ]
     }),
+    Icons(),
 
     // https://github.com/antfu/unocss
     // see unocss.config.js for config
