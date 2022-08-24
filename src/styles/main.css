@@ -1,7 +1,21 @@
-/* html,
-body,
-#app {
-  height: 100%;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-} */
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.2em;
+  font-weight: bold;
+}

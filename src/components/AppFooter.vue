@@ -3,9 +3,9 @@ const store = useStore()
 </script>
 
 <template>
-  <footer>
+  <footer class="mt-[30px] text-center">
     <p>Copyright &copy; 2021</p>
-    <RouterLink v-if="store.homePage" to="about">
+    <RouterLink v-if="store.homePage" to="about" class="text-[#333]">
       About
     </RouterLink>
     <RouterLink v-else to="/">
@@ -13,14 +13,3 @@ const store = useStore()
     </RouterLink>
   </footer>
 </template>
-
-<style scoped>
-a {
-  color: #333;
-}
-
-footer {
-  margin-top: 30px;
-  text-align: center;
-}
-</style>
