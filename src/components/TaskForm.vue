@@ -35,17 +35,17 @@ function onSubmit() {
     <div class="mx-[0] my-[20px]">
       <label class="block">Task</label>
       <input v-model="text" type="text" name="text" placeholder="Add Task"
-        class="w-full h-[40px] m-[5px] py-[3px] px-[7px] text-[17px] flex-[2] h-[20px]">
+        class="border border-solid border-black w-full h-[40px] m-[5px] py-[3px] px-[7px] text-[17px] flex-[2] h-[20px] placeholder:">
     </div>
     <div class="mx-[0] my-[20px]">
       <label class="block">Day & Time</label>
       <input v-model="day" type="text" name="day" placeholder="Add Day & Time"
-        class="w-full h-[40px] m-[5px] py-[3px] px-[7px] text-[17px] flex-[2] h-[20px]">
+        class="border border-solid border-black w-full h-[40px] m-[5px] py-[3px] px-[7px] text-[17px] flex-[2] h-[20px]">
     </div>
     <div class="mx-[0] my-[20px] flex items-center justify-between">
       <label class="block flex-1">Set Reminder</label>
       <input v-model="reminder" type="checkbox" name="reminder"
-        class="w-full h-[40px] m-[5px] py-[3px] px-[7px] text-[17px] flex-[2] h-[20px]">
+        class="border border-solid border-black w-full m-[5px] py-[3px] px-[7px] text-[17px] flex-[2] h-[20px]">
     </div>
 
     <input type="submit" value="Save Task"

@@ -6,20 +6,16 @@
   padding: 0;
 }
 
-html,
-body,
-#app {
-  height: 100%;
-}
-
 body {
   font-family: 'Poppins', sans-serif;
 }
 
 h1 {
   font-size: 2em;
+  font-weight: bold;
 }
 
 h3 {
-  font-size: 1.3em;
+  font-size: 1.2em;
+  font-weight: bold;
 }
