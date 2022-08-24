@@ -8,8 +8,6 @@ const store = useStore()
     <RouterLink v-if="store.homePage" to="about" class="text-[#333]">
       About
     </RouterLink>
-    <RouterLink v-else to="/">
-      Home
-    </RouterLink>
+    <RouterLink v-else to="/">Home</RouterLink>
   </footer>
 </template>
