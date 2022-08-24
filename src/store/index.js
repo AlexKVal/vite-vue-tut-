@@ -17,7 +17,7 @@ export const useStore = defineStore('tasks', {
   actions: {
     async deleteTask(id) {
       const res = await fetch(`${apiUrl}/${id}`, { method: 'DELETE' })
-      res.ok ? await this.fetchTasks() : alert("API error")
+      res.ok ? await this.fetchTasks() : alert('API error')
     },
     async toggleReminder(task) {
       const res = await fetch(`${apiUrl}/${task.id}`, {
@@ -25,9 +25,9 @@ export const useStore = defineStore('tasks', {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ reminder: !task.reminder })
+        body: JSON.stringify({ reminder: !task.reminder }),
       })
-      res.ok ? await this.fetchTasks() : alert("API error")
+      res.ok ? await this.fetchTasks() : alert('API error')
     },
     async addTask(newTask) {
       const res = await fetch(apiUrl, {
@@ -35,9 +35,9 @@ export const useStore = defineStore('tasks', {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(newTask)
+        body: JSON.stringify(newTask),
       })
-      res.ok ? await this.fetchTasks() : alert("API error")
+      res.ok ? await this.fetchTasks() : alert('API error')
     },
     async fetchTasks() {
       this.tasks = await this.fetchJson(apiUrl)
@@ -49,5 +49,5 @@ export const useStore = defineStore('tasks', {
     toggleAddTask() {
       this.showTaskForm = !this.showTaskForm
     },
-  }
+  },
 })

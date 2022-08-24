@@ -7,6 +7,7 @@ specifiers:
   eslint: ^8.22.0
   json-server: ^0.17.0
   pinia: ^2.0.20
+  prettier: ^2.7.1
   unocss: ^0.45.9
   unplugin-auto-import: ^0.11.2
   unplugin-icons: ^0.14.8
@@ -27,6 +28,7 @@ devDependencies:
   '@vitejs/plugin-vue': 3.0.3_vite@3.0.9+vue@3.2.37
   eslint: 8.22.0
   json-server: 0.17.0
+  prettier: 2.7.1
   unocss: 0.45.9_vite@3.0.9
   unplugin-auto-import: 0.11.2_vite@3.0.9
   unplugin-icons: 0.14.8_vite@3.0.9
@@ -2622,6 +2624,12 @@ packages:
   /prepend-http/2.0.0:
     resolution: {integrity: sha512-ravE6m9Atw9Z/jjttRUZ+clIXogdghyZAuWJ3qEzjT+jI/dL1ifAqhZeC5VHzQp1MSt1+jxKkFNemj/iO7tVUA==}
     engines: {node: '>=4'}
+    dev: true
+
+  /prettier/2.7.1:
+    resolution: {integrity: sha512-ujppO+MkdPqoVINuDFDRLClm7D78qbDt0/NR+wp5FqEZOoTNAjPHWj17QRhu7geIHJfcNhRk1XVQmF8Bp3ye+g==}
+    engines: {node: '>=10.13.0'}
+    hasBin: true
     dev: true
 
   /proxy-addr/2.0.7:
