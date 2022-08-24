@@ -64,7 +64,7 @@ export default defineConfig({
 
     // https://github.com/antfu/unocss
     // see unocss.config.js for config
-    // Unocss(),
+    Unocss(),
   ],
 
   // https://github.com/vitest-dev/vitest

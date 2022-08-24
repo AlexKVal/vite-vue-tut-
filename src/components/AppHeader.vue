@@ -15,17 +15,8 @@ const buttonColor = computed(() => store.showTaskForm ? 'red' : 'green')
 </script>
 
 <template>
-  <header>
+  <header class="flex justify-between items-center mb-[20px]">
     <h1>{{ title }}</h1>
     <ToggleButton v-show="homePage" :text="buttonText" :color="buttonColor" @click="store.toggleAddTask" />
   </header>
 </template>
-
-<style scoped>
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-}
-</style>

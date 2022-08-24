@@ -4,9 +4,9 @@ import routes from 'virtual:generated-pages'
 import App from './App.vue'
 import { createPinia } from 'pinia'
 
-// import '@unocss/reset/tailwind.css'
+import '@unocss/reset/tailwind.css'
 import './styles/main.css'
-// import 'uno.css'
+import 'uno.css'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
